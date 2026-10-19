@@ -112,7 +112,7 @@ button.ghost {
 .result .hit { background: var(--hit-bg); }
 .result .miss { background: var(--miss-bg); color: var(--miss); }
 .result .label { font-size: 0.85rem; color: var(--muted); }
-.result .name { font-size: 1.9rem; font-weight: 700; line-height: 1.35; word-break: keep-all; overflow-wrap: anywhere; }
+.result .name { font-size: 1.9rem; font-weight: 700; line-height: 1.35; white-space: pre-line; word-break: keep-all; overflow-wrap: anywhere; }
 .result .name.long { font-size: 1.35rem; }
 .result .hint { color: var(--muted); text-align: center; padding-top: 28px; font-size: 0.9rem; }
 

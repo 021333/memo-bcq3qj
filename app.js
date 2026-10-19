@@ -78,7 +78,8 @@ function show(kind, num, text) {
   label.className = "label";
   label.textContent = "番号 " + num;
   const name = document.createElement("div");
-  name.className = "name" + (text.length > 10 ? " long" : "");
+  const longest = Math.max(...text.split("\n").map((line) => line.length));
+  name.className = "name" + (longest > 7 ? " long" : ""); // スマホ幅で1行に収まらない長さは小さく
   name.textContent = text;
   box.append(label, name);
   els.result.append(box);
