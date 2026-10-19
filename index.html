@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<title>自転車番号検索</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23246b5f'/%3E%3Ccircle cx='20' cy='40' r='10' fill='none' stroke='white' stroke-width='5'/%3E%3Ccircle cx='44' cy='40' r='10' fill='none' stroke='white' stroke-width='5'/%3E%3Cpath d='M20 40l9-16h10l5 16M29 24l-3-6' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <h1>自転車番号検索</h1>
+  </header>
+
+  <section id="status-view" class="card">
+    <p id="status" class="status" role="status">読み込み中…</p>
+  </section>
+
+  <section id="search-view" class="card" hidden>
+    <form id="search-form" autocomplete="off">
+      <label for="num">ステッカー番号（4桁）</label>
+      <input id="num" class="num" type="text" inputmode="numeric" pattern="[0-9０-９]*" maxlength="4" placeholder="0000" enterkeyhint="search">
+    </form>
+    <div id="result" class="result" aria-live="polite"></div>
+  </section>
+
+  <p class="note">職員専用です。このページのリンク（URL）は校外の人に送らないでください。名簿は暗号化されており、リンクを持っている端末の中でだけ、入力した番号の生徒名を1件ずつ表示します。</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
